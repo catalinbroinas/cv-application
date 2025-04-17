@@ -2,7 +2,7 @@
 function EducationForm() {
     return (
         <form id="education-form" className="form-section">
-            <h3>Education</h3>
+            <h3 className="sub-title">Education</h3>
 
             <div className="form-group">
                 <div className="form-outline">
@@ -25,13 +25,13 @@ function EducationForm() {
 
             <div className="form-group">
                 <div className="form-outline">
-                    <input type="date" id="start-date" className="form-control" placeholder="Start date" />
-                    <label htmlFor="start-date" className="form-label">Start date</label>
+                    <input type="date" id="education-start-date" className="form-control" placeholder="Start date" />
+                    <label htmlFor="education-start-date" className="form-label">Start date</label>
                 </div>
 
                 <div className="form-outline">
-                    <input type="date" id="end-date" className="form-control" placeholder="End date" />
-                    <label htmlFor="end-date" className="form-label">End date</label>
+                    <input type="date" id="education-end-date" className="form-control" placeholder="End date" />
+                    <label htmlFor="education-end-date" className="form-label">End date</label>
                 </div>
             </div>
         </form>
