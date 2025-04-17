@@ -28,12 +28,12 @@ function ExperienceForm() {
                 </div>
             </div>
 
-            <dic className="form-group">
+            <div className="form-group">
                 <div className="form-outline">
                     <textarea id="job-description" className="form-control" placeholder="Job description"></textarea>
                     <label htmlFor="job-description" className="form-label">Job description</label>
                 </div>
-            </dic>
+            </div>
         </form>
     );
 }
