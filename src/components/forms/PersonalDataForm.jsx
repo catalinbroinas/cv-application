@@ -27,6 +27,13 @@ function PersonalDataForm() {
                     <label htmlFor="phone" className="form-label">Phone number</label>
                 </div>
             </div>
+
+            <div className="form-group">
+                <div className="form-outline">
+                    <input type="text" id="address" className="form-control" placeholder="City, Country" />
+                    <label htmlFor="address" className="form-label">City, Country</label>
+                </div>
+            </div>
         </form>
     );
 }
