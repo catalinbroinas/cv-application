@@ -11,8 +11,8 @@ function CVExperience({ company, job, description, startDate, endDate }) {
 
                 <div className="job">
                     <p className="text fw-bold">{company}</p>
-                    <p className="text fw-bolder">{job}</p>
-                    <p className="text">{description}</p>
+                    <p className="text">{job}</p>
+                    <p className="text-light">{description}</p>
                 </div>
             </div>
         </div>

@@ -103,18 +103,10 @@ footer {
 
 /* Typography */
 .title {
+  font-size: 3rem;
   font-weight: 700;
   font-family: var(--font-title);
   text-align: center;
-}
-
-h1.title {
-  font-size: 3rem;
-}
-
-h2.title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
 }
 
 .sub-title {
@@ -129,10 +121,28 @@ h2.title {
   font-size: 1rem;
 }
 
+.footer-text {
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.text-light {
+  color: var(--secondary-color);
+}
+
 .fw-bold {
   font-weight: 700;
 }
 
-.fw-bolder {
-  font-weight: 500;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

@@ -5,7 +5,7 @@ import CVExperience from "../../components/cv/CVExperience";
 function PreviewSection() {
     return (
         <section className="preview">
-            <h2 className="title">CV generated</h2>
+            <h2 className="sr-only">CV generated</h2>
 
             <div className="cv">
                 <CVHeader

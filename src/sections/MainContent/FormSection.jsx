@@ -5,7 +5,7 @@ import ExperienceForm from "../../components/forms/ExperienceForm";
 function FormSection() {
     return (
         <section className="insert-data">
-            <h2 className="title">Introduce data</h2>
+            <h2 className="sr-only">Introduce data</h2>
 
             <PersonalDataForm />
             <EducationForm />

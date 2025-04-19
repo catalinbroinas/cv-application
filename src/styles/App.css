@@ -84,7 +84,7 @@
 }
 
 .cv-header {
-  background-color: var(--primary-bg-color);
+  background-color: var(--secondary-bg-color);
   color: var(--primary-color);
   padding: 1.5rem 2rem;
   display: flex;
@@ -101,10 +101,17 @@
 
 .cv-header .cv-contact {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+}
+
+.cv-header .cv-contact .text {
+  margin-right: 2rem;
+}
+
+.cv-header .cv-contact .text:last-of-type {
+  margin-right: 0;
 }
 
 .cv-education .content,
