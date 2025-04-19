@@ -1,5 +1,6 @@
 import CVHeader from "../../components/cv/CVHeader";
 import CVEducation from "../../components/cv/CVEducation";
+import CVExperience from "../../components/cv/CVExperience";
 
 function PreviewSection() {
     return (
@@ -20,6 +21,13 @@ function PreviewSection() {
                     degree="Calculatoare și Tehnologia Informației"
                     startDate="01.10.2015"
                     endDate="12.09.2019"
+                />
+                <CVExperience
+                    company="SDG Webs"
+                    job="Full stack developer"
+                    description="Build website with PHP and MySQL"
+                    startDate="30.09.2018"
+                    endDate="30.11.2018"
                 />
             </div>
         </section>
