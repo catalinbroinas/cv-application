@@ -56,7 +56,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 .cv-header .cv-contact {
@@ -71,6 +71,7 @@
 .cv-experience .content {
   display: grid;
   grid-template-columns: auto 1fr;
+  padding: 0 3rem;
   gap: 2rem;
 }
 
