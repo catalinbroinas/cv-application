@@ -1,4 +1,5 @@
 import CVHeader from "../../components/cv/CVHeader";
+import CVEducation from "../../components/cv/CVEducation";
 
 function PreviewSection() {
     return (
@@ -11,6 +12,16 @@ function PreviewSection() {
                 phone="0765 xxx xxx"
                 address="Oradea, Romania"
             />
+
+            <div className="cv-body">
+                <CVEducation 
+                    schoolName="Universitatea Oradea"
+                    schoolLocation="Oradea"
+                    degree="Calculatoare și Tehnologia Informației"
+                    startDate="01.10.2015"
+                    endDate="12.09.2019"
+                />
+            </div>
         </section>
     );
 }
