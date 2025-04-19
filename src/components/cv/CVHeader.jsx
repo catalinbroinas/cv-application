@@ -5,9 +5,9 @@ function CVHeader({ fullName, email, phone, address }) {
             <h3 id="" className="title">{fullName}</h3>
 
             <div className="cv-contact">
-                <span className="text">{email}</span>
-                <span className="text">{phone}</span>
-                <span className="text">{address}</span>
+                <p className="text">{email}</p>
+                <p className="text">{phone}</p>
+                <p className="text">{address}</p>
             </div>
         </div>
     );
