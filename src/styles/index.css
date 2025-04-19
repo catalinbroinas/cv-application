@@ -6,10 +6,13 @@
   /* Background colors */
   --main-bg-color: #fbfbfb;
   --primary-bg-color: #304ffe;
+  --secondary-bg-color: #5c6bc0;
 
   /* Text colors */
   --main-color: #332d2d;
   --primary-color: #ffffff;
+  --secondary-color: #607d8b;
+  --accent-color: #00e5ff;
 
   /* Section margin bottom */
   --section-spacing-sm: 2rem;
