@@ -81,11 +81,13 @@ p {
 }
 
 .intro {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-color);
-  padding: 2rem 3rem;
+  background-color: white;
+  color: var(--primary-bg-color);
+  padding: 1.5rem 3rem;
   margin-bottom: var(--section-spacing-sm);
   text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .main-content {
