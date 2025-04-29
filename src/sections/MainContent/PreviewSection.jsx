@@ -2,7 +2,7 @@ import CVHeader from "../../components/cv/CVHeader";
 import CVEducation from "../../components/cv/CVEducation";
 import CVExperience from "../../components/cv/CVExperience";
 
-function PreviewSection({ personalData }) {
+function PreviewSection({ personalData, educationData }) {
     return (
         <section className="preview">
             <h2 className="sr-only">CV generated</h2>
@@ -11,13 +11,7 @@ function PreviewSection({ personalData }) {
                 <CVHeader personalData={personalData} />
 
                 <div className="cv-body">
-                    <CVEducation 
-                        schoolName="Universitatea Oradea"
-                        schoolLocation="Oradea"
-                        degree="Calculatoare și Tehnologia Informației"
-                        startDate="01.10.2015"
-                        endDate="12.09.2019"
-                    />
+                    <CVEducation educationData={educationData} />
                     <CVExperience
                         company="SDG Webs"
                         job="Full stack developer"

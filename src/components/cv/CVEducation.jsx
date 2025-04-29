@@ -1,12 +1,14 @@
 
-function CVEducation({ schoolName, schoolLocation, degree, startDate, endDate }) {
+function CVEducation({ educationData }) {
+    const { schoolName, schoolLocation, degree, educationStartDate, educationEndDate } = educationData;
+
     return (
         <div className="cv-education">
             <h3 className="sub-title">Education</h3>
 
             <div className="content">
                 <div className="date-time">
-                    <p className="text">{startDate}-{endDate}</p>
+                    <p className="text">{educationStartDate} - {educationEndDate}</p>
                     <p className="text">{schoolLocation}</p>
                 </div>
 
