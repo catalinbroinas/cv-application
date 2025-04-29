@@ -2,12 +2,12 @@ import PersonalDataForm from "../../components/forms/PersonalDataForm";
 import EducationForm from "../../components/forms/EducationForm";
 import ExperienceForm from "../../components/forms/ExperienceForm";
 
-function FormSection() {
+function FormSection({ setPersonalData }) {
     return (
         <section className="insert-data">
             <h2 className="sr-only">Introduce data</h2>
 
-            <PersonalDataForm />
+            <PersonalDataForm onSave={setPersonalData} />
             <EducationForm />
             <ExperienceForm />
         </section>

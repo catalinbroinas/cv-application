@@ -1,5 +1,8 @@
 
-function CVHeader({ fullName, email, phone, address }) {
+function CVHeader({ personalData }) {
+    const { firstName, lastName, email, phone, address } = personalData;
+    const fullName = firstName + ' ' + lastName;
+    
     return (
         <div className="cv-header">
             <h3 id="" className="title">{fullName}</h3>

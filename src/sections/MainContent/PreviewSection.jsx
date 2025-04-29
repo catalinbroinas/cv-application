@@ -2,18 +2,13 @@ import CVHeader from "../../components/cv/CVHeader";
 import CVEducation from "../../components/cv/CVEducation";
 import CVExperience from "../../components/cv/CVExperience";
 
-function PreviewSection() {
+function PreviewSection({ personalData }) {
     return (
         <section className="preview">
             <h2 className="sr-only">CV generated</h2>
 
             <div className="cv">
-                <CVHeader
-                    fullName="Catalin Broinas"
-                    email="catalinbroinas@yahoo.com"
-                    phone="0765 xxx xxx"
-                    address="Oradea, Romania"
-                />
+                <CVHeader personalData={personalData} />
 
                 <div className="cv-body">
                     <CVEducation 
