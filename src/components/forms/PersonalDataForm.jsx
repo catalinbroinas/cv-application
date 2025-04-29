@@ -1,5 +1,7 @@
 
 function PersonalDataForm() {
+    const handleSaveClick = () => {};
+
     return (
         <form id="personal-data-form" className="form-section">
             <h3 className="sub-title">Personal Information</h3>
@@ -34,6 +36,8 @@ function PersonalDataForm() {
                     <label htmlFor="address" className="form-label">City, Country</label>
                 </div>
             </div>
+
+            <button className="btn btn-primary" type="button" onClick={handleSaveClick}>Save</button>
         </form>
     );
 }
