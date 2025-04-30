@@ -5,10 +5,12 @@ import EducationForm from "../../components/forms/EducationForm";
 import ExperienceForm from "../../components/forms/ExperienceForm";
 import PersonalDataDisplay from "../../components/display/PersonalDataDisplay";
 import EducationDataDisplay from "../../components/display/EducationDataDisplay";
+import ExperienceDataDisplay from "../../components/display/ExperienceDataDisplay";
 
-function FormSection({ setPersonalData, personalData, setEducationData, educationData, setExperienceData }) {
+function FormSection({ setPersonalData, personalData, setEducationData, educationData, setExperienceData, experienceData }) {
     const [isEditing, setIsEditing] = useState(false);
     const [isEditingEducation, setIsEditingEducation] = useState(false);
+    const [isEditingExperience, setIsEditingExperience] = useState(false);
 
     return (
         <section className="insert-data">
@@ -58,7 +60,23 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
 
             <div className="form-section">
                 <h3 className="sub-title">Work Experience</h3>
-                <ExperienceForm onAdd={setExperienceData} />
+
+                {
+                    isEditingExperience ? (
+                        <ExperienceForm 
+                            onAdd={(data) => {
+                                setExperienceData(data)
+                                setIsEditingExperience(false);
+                            }}
+                            initialData={experienceData}
+                        />
+                    ) : (
+                        <ExperienceDataDisplay
+                            experienceData={experienceData}
+                            onEdit={() => setIsEditingExperience(true)}
+                        />
+                    )
+                }
             </div>
         </section>
     );

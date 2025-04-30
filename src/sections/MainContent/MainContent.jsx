@@ -35,6 +35,7 @@ function MainContent() {
                     setEducationData={setEducationData}
                     educationData={educationData}
                     setExperienceData={setExperienceData}
+                    experienceData={experienceData}
                 />
                 <PreviewSection 
                     personalData={personalData}

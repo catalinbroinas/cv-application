@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-function ExperienceForm({ onAdd }) {
-    const [jobTitle, setJobTitle] = useState('');
-    const [jobDescription, setJobDescription] = useState('');
-    const [companyName, setCompanyName] = useState('');
-    const [experienceStartDate, setExperienceStartDate] = useState('');
-    const [experienceEndDate, setExperienceEndDate] = useState('');
+function ExperienceForm({ onAdd, initialData = {} }) {
+    const [jobTitle, setJobTitle] = useState(initialData.jobTitle || '');
+    const [jobDescription, setJobDescription] = useState(initialData.jobDescription || '');
+    const [companyName, setCompanyName] = useState(initialData.companyName || '');
+    const [experienceStartDate, setExperienceStartDate] = useState(initialData.experienceStartDate || '');
+    const [experienceEndDate, setExperienceEndDate] = useState(initialData.experienceEndDate || '');
     
     const handleAddClick = () => {
         onAdd({jobTitle, companyName, experienceStartDate, experienceEndDate, jobDescription});
