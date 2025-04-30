@@ -11,6 +11,14 @@ function EducationForm({ onAdd, initialData = {} }) {
         onAdd({ schoolName, schoolLocation, degree, educationStartDate, educationEndDate });
     };
 
+    const handleClearClick = () => {
+        setSchoolName('');
+        setSchoolLocation('');
+        setDegree('');
+        setEducationStartDate('');
+        setEducationEndDate('');
+    };
+
     return (
         <form 
             id="education-form" 
@@ -83,7 +91,10 @@ function EducationForm({ onAdd, initialData = {} }) {
                 </div>
             </div>
 
-            <button className="btn btn-primary" onClick={handleAddClick}>Add</button>
+            <div className="button-group">
+                <button className="btn btn-secondary" onClick={handleClearClick}>Clear</button>
+                <button className="btn btn-primary" onClick={handleAddClick}>Add</button>
+            </div>
         </form>
     );
 }
