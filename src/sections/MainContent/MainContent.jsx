@@ -15,7 +15,7 @@ function MainContent() {
         schoolName: 'Universitatea Oradea',
         schoolLocation: 'Oradea, Romania',
         degree: 'Calculatoare și Tehnologia Informației',
-        educationStartDate: '2015-10.01',
+        educationStartDate: '2015-10-01',
         educationEndDate: '2019-09-12'
     });
     const [experienceData, setExperienceData] = useState({
