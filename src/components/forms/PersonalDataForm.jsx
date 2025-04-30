@@ -11,6 +11,14 @@ function PersonalDataForm({ onSave, initialData = {} }) {
         onSave({firstName, lastName, email, phone, address});
     };
 
+    const handleClearClick = () => {
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('');
+        setAddress('');
+    };
+
     return (
         <form 
             id="personal-data-form" 
@@ -83,7 +91,19 @@ function PersonalDataForm({ onSave, initialData = {} }) {
                 </div>
             </div>
 
-            <button className="btn btn-primary" type="submit" onClick={handleSaveClick}>Save</button>
+            <div className="button-group">
+                <button 
+                    className="btn btn-secondary" 
+                    type="reset" 
+                    onClick={handleClearClick}
+                >Clear</button>
+
+                <button 
+                    className="btn btn-primary" 
+                    type="submit" 
+                    onClick={handleSaveClick}
+                >Save</button>
+            </div>
         </form>
     );
 }
