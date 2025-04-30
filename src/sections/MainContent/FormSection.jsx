@@ -4,9 +4,11 @@ import PersonalDataForm from "../../components/forms/PersonalDataForm";
 import EducationForm from "../../components/forms/EducationForm";
 import ExperienceForm from "../../components/forms/ExperienceForm";
 import PersonalDataDisplay from "../../components/display/PersonalDataDisplay";
+import EducationDataDisplay from "../../components/display/EducationDataDisplay";
 
-function FormSection({ setPersonalData, personalData, setEducationData, setExperienceData }) {
+function FormSection({ setPersonalData, personalData, setEducationData, educationData, setExperienceData }) {
     const [isEditing, setIsEditing] = useState(false);
+    const [isEditingEducation, setIsEditingEducation] = useState(false);
 
     return (
         <section className="insert-data">
@@ -35,7 +37,23 @@ function FormSection({ setPersonalData, personalData, setEducationData, setExper
 
             <div className="form-section">
                 <h3 className="sub-title">Education</h3>
-                <EducationForm onAdd={setEducationData} />
+
+                {
+                    isEditingEducation ? (
+                        <EducationForm 
+                            onAdd={(data) => {
+                                setEducationData(data);
+                                setIsEditingEducation(false);
+                            }}
+                            initialData={educationData}
+                        />
+                    ) : (
+                        <EducationDataDisplay
+                            educationData={educationData}
+                            onEdit={() => setIsEditingEducation(true)}
+                        />
+                    )
+                }
             </div>
 
             <div className="form-section">

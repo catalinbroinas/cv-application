@@ -33,6 +33,7 @@ function MainContent() {
                     setPersonalData={setPersonalData}
                     personalData={personalData}
                     setEducationData={setEducationData}
+                    educationData={educationData}
                     setExperienceData={setExperienceData}
                 />
                 <PreviewSection 
