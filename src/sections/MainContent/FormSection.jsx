@@ -1,15 +1,47 @@
+import { useState } from "react";
+
 import PersonalDataForm from "../../components/forms/PersonalDataForm";
 import EducationForm from "../../components/forms/EducationForm";
 import ExperienceForm from "../../components/forms/ExperienceForm";
+import PersonalDataDisplay from "../../components/display/PersonalDataDisplay";
 
-function FormSection({ setPersonalData, setEducationData, setExperienceData }) {
+function FormSection({ setPersonalData, personalData, setEducationData, setExperienceData }) {
+    const [isEditing, setIsEditing] = useState(false);
+
     return (
         <section className="insert-data">
             <h2 className="sr-only">Introduce data</h2>
 
-            <PersonalDataForm onSave={setPersonalData} />
-            <EducationForm onAdd={setEducationData} />
-            <ExperienceForm onAdd={setExperienceData} />
+            <div className="form-section">
+                <h3 className="sub-title">Personal Information</h3>
+
+                {
+                    isEditing ? (
+                        <PersonalDataForm 
+                            onSave={(data) => {
+                                setPersonalData(data);
+                                setIsEditing(false);
+                            }}
+                            initialData={personalData}
+                        />
+                    ) : (
+                        <PersonalDataDisplay
+                            personalData={personalData}
+                            onEdit={() => setIsEditing(true)}
+                        />
+                    )
+                }
+            </div>
+
+            <div className="form-section">
+                <h3 className="sub-title">Education</h3>
+                <EducationForm onAdd={setEducationData} />
+            </div>
+
+            <div className="form-section">
+                <h3 className="sub-title">Work Experience</h3>
+                <ExperienceForm onAdd={setExperienceData} />
+            </div>
         </section>
     );
 }

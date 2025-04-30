@@ -31,6 +31,7 @@ function MainContent() {
             <div className="main-content">
                 <FormSection 
                     setPersonalData={setPersonalData}
+                    personalData={personalData}
                     setEducationData={setEducationData}
                     setExperienceData={setExperienceData}
                 />

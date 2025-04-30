@@ -14,11 +14,9 @@ function ExperienceForm({ onAdd }) {
     return (
         <form 
             id="experience-form" 
-            className="form-section"
+            className="form-wrapper"
             onSubmit={(e) => e.preventDefault()}
         >
-            <h3 className="sub-title">Work Experience</h3>
-
             <div className="form-group">
                 <div className="form-outline">
                     <input 

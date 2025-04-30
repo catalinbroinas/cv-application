@@ -14,11 +14,9 @@ function EducationForm({ onAdd }) {
     return (
         <form 
             id="education-form" 
-            className="form-section"
+            className="form-wrapper"
             onSubmit={(e) => e.preventDefault()}
         >
-            <h3 className="sub-title">Education</h3>
-
             <div className="form-group">
                 <div className="form-outline">
                     <input 

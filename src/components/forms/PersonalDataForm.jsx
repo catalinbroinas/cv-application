@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-function PersonalDataForm({ onSave }) {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [address, setAddress] = useState('');
+function PersonalDataForm({ onSave, initialData = {} }) {
+    const [firstName, setFirstName] = useState(initialData.firstName || '');
+    const [lastName, setLastName] = useState(initialData.lastName || '');
+    const [email, setEmail] = useState(initialData.email || '');
+    const [phone, setPhone] = useState(initialData.phone || '');
+    const [address, setAddress] = useState(initialData.address || '');
 
     const handleSaveClick = () => {
         onSave({firstName, lastName, email, phone, address});
@@ -14,11 +14,9 @@ function PersonalDataForm({ onSave }) {
     return (
         <form 
             id="personal-data-form" 
-            className="form-section"
+            className="form-wrapper"
             onSubmit={(e) => e.preventDefault()}
         >
-            <h3 className="sub-title">Personal Information</h3>
-
             <div className="form-group">
                 <div className="form-outline">
                     <input 
