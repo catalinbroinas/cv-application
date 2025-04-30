@@ -11,6 +11,14 @@ function ExperienceForm({ onAdd, initialData = {} }) {
         onAdd({jobTitle, companyName, experienceStartDate, experienceEndDate, jobDescription});
     };
 
+    const handleClearClick = () => {
+        setJobTitle('');
+        setJobDescription('');
+        setCompanyName('');
+        setExperienceStartDate('');
+        setExperienceEndDate('');
+    };
+
     return (
         <form 
             id="experience-form" 
@@ -82,7 +90,19 @@ function ExperienceForm({ onAdd, initialData = {} }) {
                 </div>
             </div>
 
-            <button className="btn btn-primary" onClick={handleAddClick}>Add</button>
+            <div className="button-group">
+                <button 
+                    className="btn btn-secondary" 
+                    type="reset" 
+                    onClick={handleClearClick}
+                >Clear</button>
+
+                <button 
+                    className="btn btn-primary" 
+                    type="submit" 
+                    onClick={handleAddClick}
+                >Add</button>
+            </div>
         </form>
     );
 }
