@@ -92,8 +92,17 @@ function EducationForm({ onAdd, initialData = {} }) {
             </div>
 
             <div className="button-group">
-                <button className="btn btn-secondary" onClick={handleClearClick}>Clear</button>
-                <button className="btn btn-primary" onClick={handleAddClick}>Add</button>
+                <button 
+                    className="btn btn-secondary" 
+                    type="reset" 
+                    onClick={handleClearClick}
+                >Clear</button>
+
+                <button 
+                    className="btn btn-primary" 
+                    type="submit" 
+                    onClick={handleAddClick}
+                >Add</button>
             </div>
         </form>
     );
