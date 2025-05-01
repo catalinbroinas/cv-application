@@ -12,6 +12,7 @@ function MainContent() {
         address: 'Oradea, Romania'
     });
     const [educationData, setEducationData] = useState([{
+        id: crypto.randomUUID(),
         schoolName: 'Universitatea Oradea',
         schoolLocation: 'Oradea, Romania',
         degree: 'Calculatoare și Tehnologia Informației',

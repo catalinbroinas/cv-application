@@ -1,14 +1,15 @@
 import { useState } from "react";
 
 function EducationForm({ onAdd, initialData = {} }) {
+    const id = initialData.id || crypto.randomUUID();
     const [schoolName, setSchoolName] = useState(initialData.schoolName || '');
     const [schoolLocation, setSchoolLocation] = useState(initialData.schoolLocation || '');
     const [degree, setDegree] = useState(initialData.degree || '');
     const [educationStartDate, setEducationStartDate] = useState(initialData.educationStartDate || '');
     const [educationEndDate, setEducationEndDate] = useState(initialData.educationEndDate || '');
 
-    const handleAddClick = () => {
-        onAdd({ schoolName, schoolLocation, degree, educationStartDate, educationEndDate });
+    const handleAddClick = () => { 
+        onAdd({ id, schoolName, schoolLocation, degree, educationStartDate, educationEndDate });
     };
 
     const handleClearClick = () => {

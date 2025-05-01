@@ -4,8 +4,8 @@ function CVEducation({ educationData }) {
         <div className="cv-education">
             <h3 className="sub-title">Education</h3>
 
-            {educationData.map((entry, index) => (
-                <div className="content" key={index}>
+            {educationData.map((entry) => (
+                <div className="content" key={entry.id}>
                     <div className="date-time">
                         <p className="text">{entry.educationStartDate} - {entry.educationEndDate}</p>
                         <p className="text">{entry.schoolLocation}</p>
