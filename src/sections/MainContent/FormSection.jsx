@@ -67,13 +67,23 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                               }}
                         />
                     ) : (
-                        <EducationDataDisplay
-                            educationData={educationData}
-                            onEdit={(id) => {
-                                setEducationEditingId(id);
-                                setIsEditingEducation(true);
-                            }}
-                        />
+                        <>
+                            <EducationDataDisplay
+                                educationData={educationData}
+                                onEdit={(id) => {
+                                    setEducationEditingId(id);
+                                    setIsEditingEducation(true);
+                                }}
+                            />
+                            <button 
+                                className="btn btn-primary" 
+                                type="button"
+                                onClick={() => {
+                                    setIsEditingEducation(true)
+                                    setEducationEditingId(null)
+                                }}
+                            >Add Education</button>
+                        </>
                     )
                 }
             </div>
