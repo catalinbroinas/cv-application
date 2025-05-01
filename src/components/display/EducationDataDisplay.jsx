@@ -1,7 +1,5 @@
 
 function EducationDataDisplay({ educationData, onEdit }) {
-    const handleEditClick = () => onEdit();
-
     return (
         <>
         {educationData.map((entry) => (
@@ -14,7 +12,11 @@ function EducationDataDisplay({ educationData, onEdit }) {
                 </div>
 
                 <div className="display-data-action">
-                    <button className="btn btn-secondary" type="button" onClick={handleEditClick}>Edit</button>
+                    <button 
+                        className="btn btn-secondary" 
+                        type="button" 
+                        onClick={() => onEdit(entry.id)}
+                    >Edit</button>
                 </div>
             </div>
         ))}

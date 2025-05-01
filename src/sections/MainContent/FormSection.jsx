@@ -12,6 +12,8 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
     const [isEditingEducation, setIsEditingEducation] = useState(false);
     const [isEditingExperience, setIsEditingExperience] = useState(false);
 
+    const [educationEditingId, setEducationEditingId] = useState(null);
+
     return (
         <section className="insert-data">
             <h2 className="sr-only">Introduce data</h2>
@@ -42,17 +44,35 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
 
                 {
                     isEditingEducation ? (
-                        <EducationForm 
-                            onAdd={(newEntry) => {
-                                setEducationData((prevData) => [...prevData, newEntry])
+                        <EducationForm
+                            initialData={
+                                educationEditingId 
+                                    ? educationData.find(item => item.id === educationEditingId) 
+                                    : {}
+                            }
+                            
+                            onAdd={(entry) => {
+                                if (educationEditingId) {
+                                  // Edit
+                                  setEducationData(prev =>
+                                    prev.map((item) => item.id === educationEditingId ? entry : item)
+                                  );
+                                } else {
+                                  // Add
+                                  setEducationData(prev => [...prev, entry]);
+                                }
+                              
+                                setEducationEditingId(null);
                                 setIsEditingEducation(false);
-                            }}
-                            initialData={educationData}
+                              }}
                         />
                     ) : (
                         <EducationDataDisplay
                             educationData={educationData}
-                            onEdit={() => setIsEditingEducation(true)}
+                            onEdit={(id) => {
+                                setEducationEditingId(id);
+                                setIsEditingEducation(true);
+                            }}
                         />
                     )
                 }
