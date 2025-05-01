@@ -43,8 +43,8 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                 {
                     isEditingEducation ? (
                         <EducationForm 
-                            onAdd={(data) => {
-                                setEducationData(data);
+                            onAdd={(newEntry) => {
+                                setEducationData((prevData) => [...prevData, newEntry])
                                 setIsEditingEducation(false);
                             }}
                             initialData={educationData}
