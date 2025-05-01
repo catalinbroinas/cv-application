@@ -199,6 +199,16 @@
   gap: 2rem;
 }
 
+.cv-education .content,
+.cv-experience .content {
+  margin-bottom: 1rem;
+}
+
+.cv-education .content:last-of-type,
+.cv-experience .content:last-of-type {
+  margin-bottom: 0;
+}
+
 /* CV Preview Typography */
 .cv-header .title {
   font-size: 2.5rem;
