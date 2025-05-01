@@ -11,13 +11,13 @@ function MainContent() {
         phone: '0765 xxx xxx',
         address: 'Oradea, Romania'
     });
-    const [educationData, setEducationData] = useState({
+    const [educationData, setEducationData] = useState([{
         schoolName: 'Universitatea Oradea',
         schoolLocation: 'Oradea, Romania',
         degree: 'Calculatoare și Tehnologia Informației',
         educationStartDate: '2015-10-01',
         educationEndDate: '2019-09-12'
-    });
+        }]);
     const [experienceData, setExperienceData] = useState({
         jobTitle: 'Full stack developer',
         companyName: 'SDG Webs',
