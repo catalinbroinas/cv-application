@@ -89,13 +89,13 @@
 }
 
 .button-group .btn {
-  margin-left: 0;
+  margin: 0;
 }
 
 .btn {
   cursor: pointer;
   display: inline-flex;
-  margin-left: auto;
+  margin: 0 auto;
   padding: 0.5rem 1.5rem;
   font-size: 0.75rem;
   font-family: var(--font-title);
