@@ -129,12 +129,21 @@
   box-shadow: none;
 }
 
-.btn-secondary:hover {
+.btn-tertiary {
+  background-color: var(--tertiary-bg-color);
+  color: var(--primary-bg-color);
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.btn-secondary:hover,
+.btn-tertiary:hover {
   box-shadow: 0 2px 6px rgba(41, 98, 255, 0.1);
   transform: translateY(-1px);
 }
 
-.btn-secondary:active {
+.btn-secondary:active,
+.btn-tertiary:hover:active {
   box-shadow: none;
   transform: translateY(0);
 }
