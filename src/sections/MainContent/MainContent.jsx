@@ -20,6 +20,7 @@ function MainContent() {
         educationEndDate: '2019-09-12'
         }]);
     const [experienceData, setExperienceData] = useState([{
+        id: crypto.randomUUID(),
         jobTitle: 'Full stack developer',
         companyName: 'SDG Webs',
         experienceStartDate: '2018-09-30',

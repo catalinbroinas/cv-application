@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function ExperienceForm({ onAdd, initialData = {} }) {
+    const id = crypto.randomUUID() || initialData.id;
     const [jobTitle, setJobTitle] = useState(initialData.jobTitle || '');
     const [jobDescription, setJobDescription] = useState(initialData.jobDescription || '');
     const [companyName, setCompanyName] = useState(initialData.companyName || '');
@@ -8,7 +9,7 @@ function ExperienceForm({ onAdd, initialData = {} }) {
     const [experienceEndDate, setExperienceEndDate] = useState(initialData.experienceEndDate || '');
     
     const handleAddClick = () => {
-        onAdd({jobTitle, companyName, experienceStartDate, experienceEndDate, jobDescription});
+        onAdd({ id, jobTitle, companyName, experienceStartDate, experienceEndDate, jobDescription});
     };
 
     const handleClearClick = () => {

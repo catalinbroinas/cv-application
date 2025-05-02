@@ -5,7 +5,7 @@ function ExperienceDataDisplay({ experienceData, onEdit }) {
     return (
         <>
             {experienceData.map((entry) => (
-                <div className="display-data">
+                <div className="display-data" key={entry.id}>
                     <div className="display-data-content">
                         <p className="text fw-bold">{entry.companyName}</p>
                         <p className="text">{entry.jobTitle}</p>

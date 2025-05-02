@@ -5,7 +5,7 @@ function CVExperience({ experienceData }) {
             <h3 className="sub-title">Professional Experience</h3>
 
             {experienceData.map((entry) => (
-                <div className="content">
+                <div className="content" key={entry.id}>
                     <div className="date-time">
                         <p className="text">{entry.experienceStartDate} - {entry.experienceEndDate}</p>
                     </div>
