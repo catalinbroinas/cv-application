@@ -81,9 +81,14 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                         <>
                             <EducationDataDisplay
                                 educationData={educationData}
+
                                 onEdit={(id) => {
                                     setEducationEditingId(id);
                                     setIsEditingEducation(true);
+                                }}
+
+                                onDelete={(id) => {
+                                    setEducationData(prev => prev.filter(item => item.id !== id ))
                                 }}
                             />
                             <button 

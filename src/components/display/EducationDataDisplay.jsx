@@ -1,5 +1,5 @@
 
-function EducationDataDisplay({ educationData, onEdit }) {
+function EducationDataDisplay({ educationData, onEdit, onDelete }) {
     return (
         <>
         {educationData.map((entry) => (
@@ -12,6 +12,12 @@ function EducationDataDisplay({ educationData, onEdit }) {
                 </div>
 
                 <div className="display-data-action">
+                    <button
+                        className="btn btn-secondary btn-delete"
+                        type="button"
+                        onClick={() => onDelete(entry.id)}
+                    >Delete</button>
+
                     <button 
                         className="btn btn-secondary" 
                         type="button" 
