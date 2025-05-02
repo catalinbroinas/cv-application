@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function PersonalDataForm({ onSave, initialData = {} }) {
+function PersonalDataForm({ onSave, onBack, initialData = {} }) {
     const [firstName, setFirstName] = useState(initialData.firstName || '');
     const [lastName, setLastName] = useState(initialData.lastName || '');
     const [email, setEmail] = useState(initialData.email || '');
@@ -17,6 +17,10 @@ function PersonalDataForm({ onSave, initialData = {} }) {
         setEmail('');
         setPhone('');
         setAddress('');
+    };
+
+    const handleBackClick = () => {
+        onBack();
     };
 
     return (
@@ -92,6 +96,12 @@ function PersonalDataForm({ onSave, initialData = {} }) {
             </div>
 
             <div className="button-group">
+                <button
+                    className="btn btn-tertiary"
+                    type="button"
+                    onClick={handleBackClick}
+                >Back</button>
+
                 <button 
                     className="btn btn-secondary" 
                     type="reset" 

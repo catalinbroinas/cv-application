@@ -29,6 +29,11 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                                 setPersonalData(data);
                                 setIsEditing(false);
                             }}
+
+                            onBack={() => {
+                                setIsEditing(false);
+                            }}
+                            
                             initialData={personalData}
                         />
                     ) : (
