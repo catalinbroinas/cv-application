@@ -33,7 +33,7 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                             onBack={() => {
                                 setIsEditing(false);
                             }}
-                            
+
                             initialData={personalData}
                         />
                     ) : (
@@ -70,7 +70,12 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                               
                                 setEducationEditingId(null);
                                 setIsEditingEducation(false);
-                              }}
+                            }}
+
+                            onBack={() => {
+                                setEducationEditingId(null);
+                                setIsEditingEducation(false);
+                            }}
                         />
                     ) : (
                         <>

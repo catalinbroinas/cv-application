@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function EducationForm({ onAdd, initialData = {} }) {
+function EducationForm({ onAdd, onBack, initialData = {} }) {
     const id = initialData.id || crypto.randomUUID();
     const [schoolName, setSchoolName] = useState(initialData.schoolName || '');
     const [schoolLocation, setSchoolLocation] = useState(initialData.schoolLocation || '');
@@ -11,6 +11,8 @@ function EducationForm({ onAdd, initialData = {} }) {
     const handleAddClick = () => { 
         onAdd({ id, schoolName, schoolLocation, degree, educationStartDate, educationEndDate });
     };
+
+    const handleBackClick = () => onBack();
 
     const handleClearClick = () => {
         setSchoolName('');
@@ -93,6 +95,12 @@ function EducationForm({ onAdd, initialData = {} }) {
             </div>
 
             <div className="button-group">
+                <button
+                    className="btn btn-tertiary"
+                    type="button"
+                    onClick={handleBackClick}
+                >Back</button>
+
                 <button 
                     className="btn btn-secondary" 
                     type="reset" 
