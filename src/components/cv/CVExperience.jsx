@@ -1,22 +1,22 @@
 
 function CVExperience({ experienceData }) {
-    const { jobTitle, companyName, experienceStartDate, experienceEndDate, jobDescription } = experienceData;
-
     return (
         <div className="cv-experience">
             <h3 className="sub-title">Professional Experience</h3>
 
-            <div className="content">
-                <div className="date-time">
-                    <p className="text">{experienceStartDate} - {experienceEndDate}</p>
-                </div>
+            {experienceData.map((entry) => (
+                <div className="content">
+                    <div className="date-time">
+                        <p className="text">{entry.experienceStartDate} - {entry.experienceEndDate}</p>
+                    </div>
 
-                <div className="job">
-                    <p className="text fw-bold">{companyName}</p>
-                    <p className="text">{jobTitle}</p>
-                    <p className="text-light">{jobDescription}</p>
+                    <div className="job">
+                        <p className="text fw-bold">{entry.companyName}</p>
+                        <p className="text">{entry.jobTitle}</p>
+                        <p className="text-light">{entry.jobDescription}</p>
+                    </div>
                 </div>
-            </div>
+            ))}
         </div>
     );
 }
