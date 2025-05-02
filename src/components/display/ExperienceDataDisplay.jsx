@@ -1,5 +1,5 @@
 
-function ExperienceDataDisplay({ experienceData, onEdit }) {
+function ExperienceDataDisplay({ experienceData, onEdit, onDelete }) {
     return (
         <>
             {experienceData.map((entry) => (
@@ -12,6 +12,12 @@ function ExperienceDataDisplay({ experienceData, onEdit }) {
                     </div>
 
                     <div className="display-data-action">
+                        <button
+                            className="btn btn-secondary btn-delete"
+                            type="button"
+                            onClick={() => onDelete(entry.id)}
+                        >Delete</button>
+
                         <button 
                             className="btn btn-secondary" 
                             type="button" 

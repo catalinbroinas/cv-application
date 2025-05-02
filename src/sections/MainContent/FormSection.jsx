@@ -139,9 +139,14 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                         <>
                             <ExperienceDataDisplay
                                 experienceData={experienceData}
+
                                 onEdit={(id) => {
                                     setExperienceEditingId(id)
                                     setIsEditingExperience(true)
+                                }}
+
+                                onDelete={(id) => {
+                                    setExperienceData(prev => prev.filter(item => item.id !== id))
                                 }}
                             />
 
