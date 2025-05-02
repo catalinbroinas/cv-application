@@ -124,6 +124,11 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                                 setExperienceEditingId(null)
                                 setIsEditingExperience(false)
                             }}
+
+                            onBack={() => {
+                                setExperienceEditingId(null)
+                                setIsEditingExperience(false)
+                            }}
                         />
                     ) : (
                         <>

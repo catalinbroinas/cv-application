@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ExperienceForm({ onAdd, initialData = {} }) {
+function ExperienceForm({ onAdd, onBack, initialData = {} }) {
     const id = crypto.randomUUID() || initialData.id;
     const [jobTitle, setJobTitle] = useState(initialData.jobTitle || '');
     const [jobDescription, setJobDescription] = useState(initialData.jobDescription || '');
@@ -11,6 +11,8 @@ function ExperienceForm({ onAdd, initialData = {} }) {
     const handleAddClick = () => {
         onAdd({ id, jobTitle, companyName, experienceStartDate, experienceEndDate, jobDescription});
     };
+
+    const handleBackClick = () => onBack();
 
     const handleClearClick = () => {
         setJobTitle('');
@@ -92,6 +94,12 @@ function ExperienceForm({ onAdd, initialData = {} }) {
             </div>
 
             <div className="button-group">
+                <button
+                    className="btn btn-tertiary"
+                    type="button"
+                    onClick={handleBackClick}
+                >Back</button>
+
                 <button 
                     className="btn btn-secondary" 
                     type="reset" 
