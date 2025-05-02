@@ -13,6 +13,7 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
     const [isEditingExperience, setIsEditingExperience] = useState(false);
 
     const [educationEditingId, setEducationEditingId] = useState(null);
+    const [experienceEditingId, setExperienceEditingId] = useState(null);
 
     return (
         <section className="insert-data">
@@ -94,16 +95,19 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                 {
                     isEditingExperience ? (
                         <ExperienceForm 
-                            onAdd={(data) => {
-                                setExperienceData(data)
-                                setIsEditingExperience(false);
-                            }}
-                            initialData={experienceData}
+                            initialData={
+                                experienceEditingId
+                                    ? experienceData.find(item => item.id === experienceEditingId)
+                                    : {}
+                            }
                         />
                     ) : (
                         <ExperienceDataDisplay
                             experienceData={experienceData}
-                            onEdit={() => setIsEditingExperience(true)}
+                            onEdit={(id) => {
+                                setExperienceEditingId(id)
+                                setIsEditingExperience(true)
+                            }}
                         />
                     )
                 }
