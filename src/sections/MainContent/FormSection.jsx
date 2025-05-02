@@ -100,6 +100,18 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                                     ? experienceData.find(item => item.id === experienceEditingId)
                                     : {}
                             }
+
+                            onAdd={(entry) => {
+                                if (experienceEditingId) {
+                                    // Edit
+                                    setExperienceData((prev) => (
+                                        prev.map(item => item.id === experienceEditingId ? entry : item)
+                                    ))
+                                }
+
+                                setExperienceEditingId(null)
+                                setIsEditingExperience(false)
+                            }}
                         />
                     ) : (
                         <ExperienceDataDisplay
