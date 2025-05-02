@@ -7,9 +7,18 @@ function EducationForm({ onAdd, onBack, initialData = {} }) {
     const [degree, setDegree] = useState(initialData.degree || '');
     const [educationStartDate, setEducationStartDate] = useState(initialData.educationStartDate || '');
     const [educationEndDate, setEducationEndDate] = useState(initialData.educationEndDate || '');
+    const [isPresentStudy, setIsPresentStudy] = useState(initialData.isPresentStudy || false);
 
     const handleAddClick = () => { 
-        onAdd({ id, schoolName, schoolLocation, degree, educationStartDate, educationEndDate });
+        onAdd({
+            id, 
+            schoolName, 
+            schoolLocation, 
+            degree, 
+            educationStartDate, 
+            educationEndDate: isPresentStudy ? '' : educationEndDate,
+            isPresentStudy
+        });
     };
 
     const handleBackClick = () => onBack();
@@ -91,6 +100,17 @@ function EducationForm({ onAdd, onBack, initialData = {} }) {
                         onChange={(e) => setEducationEndDate(e.target.value)}
                     />
                     <label htmlFor="education-end-date" className="form-label">End date</label>
+                </div>
+
+                <div className="form-outline checkbox-wrapper">
+                    <input
+                        type="checkbox"
+                        id="education-present-date"
+                        className="checkbox-input"
+                        checked={isPresentStudy}
+                        onChange={(e) => setIsPresentStudy(e.target.checked)}
+                    />
+                    <label htmlFor="education-present-date" className="checkbox-label">Present</label>
                 </div>
             </div>
 

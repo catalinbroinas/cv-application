@@ -8,7 +8,9 @@ function EducationDataDisplay({ educationData, onEdit, onDelete }) {
                     <p className="text fw-bold">{entry.schoolName}</p>
                     <p className="text">{entry.schoolLocation}</p>
                     <p className="text">{entry.degree}</p>
-                    <p className="text">{entry.educationStartDate} - {entry.educationEndDate}</p>
+                    <p className="text">
+                        {entry.educationStartDate} - {entry.isPresentStudy ? 'present' : entry.educationEndDate}
+                    </p>
                 </div>
 
                 <div className="display-data-action">
