@@ -107,6 +107,8 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                                     setExperienceData((prev) => (
                                         prev.map(item => item.id === experienceEditingId ? entry : item)
                                     ))
+                                } else {
+                                    setExperienceData(prev => [...prev, entry])
                                 }
 
                                 setExperienceEditingId(null)
@@ -114,13 +116,24 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                             }}
                         />
                     ) : (
-                        <ExperienceDataDisplay
-                            experienceData={experienceData}
-                            onEdit={(id) => {
-                                setExperienceEditingId(id)
-                                setIsEditingExperience(true)
-                            }}
-                        />
+                        <>
+                            <ExperienceDataDisplay
+                                experienceData={experienceData}
+                                onEdit={(id) => {
+                                    setExperienceEditingId(id)
+                                    setIsEditingExperience(true)
+                                }}
+                            />
+
+                            <button 
+                                className="btn btn-primary" 
+                                type="button"
+                                onClick={() => {
+                                    setIsEditingExperience(true)
+                                    setExperienceEditingId(null)
+                                }}
+                            >Add Experience</button>
+                        </>
                     )
                 }
             </div>
