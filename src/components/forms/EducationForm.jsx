@@ -94,10 +94,11 @@ function EducationForm({ onAdd, onBack, initialData = {} }) {
                     <input 
                         type="date" 
                         id="education-end-date" 
-                        className="form-control" 
+                        className={isPresentStudy ? 'form-control form-disabled' : 'form-control'}
                         placeholder="End date"
-                        value={educationEndDate}
+                        value={isPresentStudy ? '' : educationEndDate}
                         onChange={(e) => setEducationEndDate(e.target.value)}
+                        disabled={isPresentStudy}
                     />
                     <label htmlFor="education-end-date" className="form-label">End date</label>
                 </div>
