@@ -31,6 +31,14 @@ function ExperienceForm({ onAdd, onBack, isEditing, initialData = {} }) {
         setExperienceEndDate('');
     };
 
+    const isButtonDisabled = !(
+        jobTitle &&
+        jobDescription &&
+        companyName &&
+        experienceStartDate &&
+        (experienceEndDate || isPresentWork)
+    );
+
     return (
         <form 
             id="experience-form" 
@@ -128,9 +136,10 @@ function ExperienceForm({ onAdd, onBack, isEditing, initialData = {} }) {
                 >Clear</button>
 
                 <button 
-                    className="btn btn-primary" 
+                    className={isButtonDisabled ? 'btn btn-primary btn-disabled' : 'btn btn-primary'}
                     type="submit" 
                     onClick={handleAddClick}
+                    disabled={isButtonDisabled}
                 >{isEditing ? 'Save' : 'Add'}</button>
             </div>
         </form>
