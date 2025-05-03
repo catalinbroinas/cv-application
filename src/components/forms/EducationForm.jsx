@@ -31,6 +31,14 @@ function EducationForm({ onAdd, onBack, isEditing, initialData = {} }) {
         setEducationEndDate('');
     };
 
+    const isButtonDisabled = !(
+        schoolName && 
+        schoolLocation && 
+        degree && 
+        educationStartDate &&
+        (isPresentStudy || educationEndDate)
+    );
+
     return (
         <form 
             id="education-form" 
@@ -129,9 +137,10 @@ function EducationForm({ onAdd, onBack, isEditing, initialData = {} }) {
                 >Clear</button>
 
                 <button 
-                    className="btn btn-primary" 
+                    className={isButtonDisabled ? 'btn btn-primary btn-disabled' : 'btn btn-primary'}
                     type="submit" 
                     onClick={handleAddClick}
+                    disabled={isButtonDisabled}
                 >{isEditing ? 'Save' : 'Add'}</button>
             </div>
         </form>
