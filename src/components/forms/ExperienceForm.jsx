@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ExperienceForm({ onAdd, onBack, initialData = {} }) {
+function ExperienceForm({ onAdd, onBack, isEditing, initialData = {} }) {
     const id = crypto.randomUUID() || initialData.id;
     const [jobTitle, setJobTitle] = useState(initialData.jobTitle || '');
     const [jobDescription, setJobDescription] = useState(initialData.jobDescription || '');
@@ -131,7 +131,7 @@ function ExperienceForm({ onAdd, onBack, initialData = {} }) {
                     className="btn btn-primary" 
                     type="submit" 
                     onClick={handleAddClick}
-                >Add</button>
+                >{isEditing ? 'Save' : 'Add'}</button>
             </div>
         </form>
     );

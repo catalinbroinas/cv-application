@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function EducationForm({ onAdd, onBack, initialData = {} }) {
+function EducationForm({ onAdd, onBack, isEditing, initialData = {} }) {
     const id = initialData.id || crypto.randomUUID();
     const [schoolName, setSchoolName] = useState(initialData.schoolName || '');
     const [schoolLocation, setSchoolLocation] = useState(initialData.schoolLocation || '');
@@ -132,7 +132,7 @@ function EducationForm({ onAdd, onBack, initialData = {} }) {
                     className="btn btn-primary" 
                     type="submit" 
                     onClick={handleAddClick}
-                >Add</button>
+                >{isEditing ? 'Save' : 'Add'}</button>
             </div>
         </form>
     );

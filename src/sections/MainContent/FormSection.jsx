@@ -56,6 +56,8 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                                     ? educationData.find(item => item.id === educationEditingId) 
                                     : {}
                             }
+
+                            isEditing={educationEditingId}
                             
                             onAdd={(entry) => {
                                 if (educationEditingId) {
@@ -115,6 +117,8 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                                     ? experienceData.find(item => item.id === experienceEditingId)
                                     : {}
                             }
+
+                            isEditing={experienceEditingId}
 
                             onAdd={(entry) => {
                                 if (experienceEditingId) {
