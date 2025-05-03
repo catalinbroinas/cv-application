@@ -8,7 +8,9 @@ function ExperienceDataDisplay({ experienceData, onEdit, onDelete }) {
                         <p className="text fw-bold">{entry.companyName}</p>
                         <p className="text">{entry.jobTitle}</p>
                         <p className="text">{entry.jobDescription}</p>
-                        <p className="text">{entry.experienceStartDate} - {entry.experienceEndDate}</p>
+                        <p className="text">
+                            {entry.experienceStartDate} - {entry.isPresentWork ? 'present' : entry.experienceEndDate}
+                        </p>
                     </div>
 
                     <div className="display-data-action">

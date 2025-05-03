@@ -7,9 +7,18 @@ function ExperienceForm({ onAdd, onBack, initialData = {} }) {
     const [companyName, setCompanyName] = useState(initialData.companyName || '');
     const [experienceStartDate, setExperienceStartDate] = useState(initialData.experienceStartDate || '');
     const [experienceEndDate, setExperienceEndDate] = useState(initialData.experienceEndDate || '');
+    const [isPresentWork, setIsPresentWork] = useState(initialData.isPresentWork || false);
     
     const handleAddClick = () => {
-        onAdd({ id, jobTitle, companyName, experienceStartDate, experienceEndDate, jobDescription});
+        onAdd({ 
+            id, 
+            jobTitle, 
+            companyName, 
+            experienceStartDate, 
+            experienceEndDate: isPresentWork ? '' : experienceEndDate, 
+            jobDescription,
+            isPresentWork
+        });
     };
 
     const handleBackClick = () => onBack();
@@ -71,12 +80,24 @@ function ExperienceForm({ onAdd, onBack, initialData = {} }) {
                     <input 
                         type="date" 
                         id="experience-end-date" 
-                        className="form-control" 
+                        className={isPresentWork ? 'form-control form-disabled' : 'form-control'} 
                         placeholder="End date"
-                        value={experienceEndDate}
+                        value={isPresentWork ? '' : experienceEndDate}
                         onChange={(e) => setExperienceEndDate(e.target.value)}
+                        disabled={isPresentWork}
                     />
                     <label htmlFor="experience-end-date" className="form-label">End date</label>
+                </div>
+
+                <div className="form-outline checkbox-wrapper">
+                    <input
+                        type="checkbox"
+                        id="experience-present-date"
+                        className="checkbox-input"
+                        checked={isPresentWork}
+                        onChange={(e) => setIsPresentWork(e.target.checked)}
+                    />
+                    <label htmlFor="experience-present-date" className="checkbox-label">Present</label>
                 </div>
             </div>
 

@@ -7,7 +7,9 @@ function CVExperience({ experienceData }) {
             {experienceData.map((entry) => (
                 <div className="content" key={entry.id}>
                     <div className="date-time">
-                        <p className="text">{entry.experienceStartDate} - {entry.experienceEndDate}</p>
+                        <p className="text">
+                            {entry.experienceStartDate} - {entry.isPresentWork ? 'present' : entry.experienceEndDate}
+                        </p>
                     </div>
 
                     <div className="job">
