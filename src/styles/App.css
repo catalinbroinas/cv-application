@@ -80,6 +80,13 @@
   border-image-slice: 1;
 }
 
+.form-control.form-disabled {
+  background-color: var(--disabled-bg-color);
+  color: var(--disabled-color);
+  border-color: var(--disabled-border-color);
+  cursor: not-allowed;
+}
+
 /* Checkbox */
 .form-outline.checkbox-wrapper {
   align-self: center;
