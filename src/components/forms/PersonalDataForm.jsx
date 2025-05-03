@@ -23,6 +23,14 @@ function PersonalDataForm({ onSave, onBack, initialData = {} }) {
         onBack();
     };
 
+    const isButtonDisabled = !(
+        firstName &&
+        lastName &&
+        email &&
+        phone &&
+        address
+    );
+
     return (
         <form 
             id="personal-data-form" 
@@ -109,9 +117,10 @@ function PersonalDataForm({ onSave, onBack, initialData = {} }) {
                 >Clear</button>
 
                 <button 
-                    className="btn btn-primary" 
+                    className={isButtonDisabled ? 'btn btn-primary btn-disabled' : 'btn btn-primary'} 
                     type="submit" 
                     onClick={handleSaveClick}
+                    disabled={isButtonDisabled}
                 >Save</button>
             </div>
         </form>
