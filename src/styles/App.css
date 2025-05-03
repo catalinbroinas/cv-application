@@ -160,6 +160,13 @@
   transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
+.btn-disabled,
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.8;
+  box-shadow: none;
+}
+
 .btn-primary {
   background-color: var(--primary-bg-color);
   color: var(--primary-color);
