@@ -245,7 +245,8 @@
 .cv-header {
   background-color: var(--secondary-bg-color);
   color: var(--primary-color);
-  padding: 1.5rem 2rem;
+  padding: var(--cv-header-padding-xxl);
+  margin-bottom: var(--cv-spacing-xxl);
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -254,8 +255,6 @@
 .cv-body {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding: 3rem 0;
 }
 
 .cv-header .cv-contact {
@@ -273,10 +272,15 @@
   margin-right: 0;
 }
 
+.cv-education,
+.cv-experience {
+  margin-bottom: var(--cv-spacing-xxl);
+}
+
 .cv-education .content,
 .cv-experience .content {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 220px 1fr;
   padding: 0 3rem;
   gap: 2rem;
 }

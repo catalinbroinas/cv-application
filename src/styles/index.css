@@ -29,6 +29,18 @@
   --section-spacing-lg: 4rem;
   --section-spacing-xl: 5rem;
 
+  /* CV section spacing */
+  --cv-spacing-sm: 1.5rem;
+  --cv-spacing-md: 2rem;
+  --cv-spacing-lg: 2.5rem;
+  --cv-spacing-xxl: 3rem;
+
+  /* CV Header padding */
+  --cv-header-padding-sm: 1rem 1.5rem;
+  --cv-header-padding-md: 1.2rem 1.6rem;
+  --cv-header-padding-lg: 1.35rem 1.85rem;
+  --cv-header-padding-xxl: 1.5rem 2rem;
+
   /* Container padding */
   --container-padding-sm: 1.5rem;
   --container-padding-md: 2rem;
