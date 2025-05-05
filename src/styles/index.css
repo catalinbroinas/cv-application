@@ -26,6 +26,12 @@
   /* Specific colors */
   --danger-color: #d32f2f;
 
+  /* Intro - Footer padding */
+  --section-padding-sm: 1rem;
+  --section-padding-md: 1.25rem;
+  --section-padding-lg: 1.35rem;
+  --section-padding-xxl: 1.5rem;
+
   /* Section margin bottom */
   --section-spacing-sm: 1.5rem;
   --section-spacing-md: 2rem;
@@ -33,9 +39,9 @@
   --section-spacing-xxl: 3rem;
 
   /* Components spacing */
-  --component-spacing-sm: 1rem;
-  --component-spacing-md: 1.25rem;
-  --component-spacing-lg: 1.5rem;
+  --component-spacing-sm: 1.25rem;
+  --component-spacing-md: 1.5rem;
+  --component-spacing-lg: 1.75rem;
   --component-spacing-xxl: 2rem;
 
   /* Components padding */

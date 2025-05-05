@@ -5,7 +5,7 @@
 .intro {
   background-color: white;
   color: var(--primary-bg-color);
-  padding: 1.5rem 3rem;
+  padding: var(--section-padding-xxl) 3rem;
   margin-bottom: var(--section-spacing-xxl);
   text-align: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -21,7 +21,7 @@
 
 footer {
   background-color: var(--tertiary-bg-color);
-  padding: 1.5rem 3rem;
+  padding: var(--section-padding-xxl) 3rem;
   text-align: center;
 }
 
@@ -349,4 +349,61 @@ footer {
 .cv-body .text {
   font-size: 1rem;
   margin-bottom: 0.5rem;
+}
+
+/* Large devices */
+@media (max-width: 1399px) {
+  .intro {
+    padding: var(--section-padding-lg);
+    margin-bottom: var(--section-spacing-lg);
+  }
+
+  .main-content {
+    margin-bottom: var(--section-spacing-lg);
+  }
+
+  .footer {
+    padding: var(--section-padding-lg);
+  }
+
+  .form-section {
+    padding: var(--component-padding-lg);
+    margin-bottom: var(--component-spacing-lg);
+  }
+
+  .cv-header {
+    padding: var(--cv-header-padding-lg);
+    margin-bottom: var(--cv-spacing-lg);
+  }
+
+  .cv-education .content,
+  .cv-experience .content {
+    padding-inline: var(--cv-spacing-lg);
+  }
+
+  .cv-education,
+  .cv-experience {
+    margin-bottom: var(--cv-spacing-xxl);
+  }
+}
+
+@media (max-width: 1199px) {
+  .cv-header .cv-contact {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.75rem;
+  }
+
+  .cv-education .content,
+  .cv-experience .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Medium devices */
+@media (max-width: 991px) {
+}
+
+/* Small devices */
+@media (max-width: 767px) {
 }
