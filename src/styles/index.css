@@ -27,10 +27,22 @@
   --danger-color: #d32f2f;
 
   /* Section margin bottom */
-  --section-spacing-sm: 2rem;
-  --section-spacing-md: 3rem;
-  --section-spacing-lg: 4rem;
-  --section-spacing-xl: 5rem;
+  --section-spacing-sm: 1.5rem;
+  --section-spacing-md: 2rem;
+  --section-spacing-lg: 2.5rem;
+  --section-spacing-xxl: 3rem;
+
+  /* Components spacing */
+  --component-spacing-sm: 1rem;
+  --component-spacing-md: 1.25rem;
+  --component-spacing-lg: 1.5rem;
+  --component-spacing-xxl: 2rem;
+
+  /* Components padding */
+  --component-padding-sm: 1rem 2rem;
+  --component-padding-md: 1.5rem 2.25rem;
+  --component-padding-lg: 1.75rem 2.5rem;
+  --component-padding-xxl: 2rem 3rem;
 
   /* CV section spacing */
   --cv-spacing-sm: 1.5rem;

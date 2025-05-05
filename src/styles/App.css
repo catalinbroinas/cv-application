@@ -6,7 +6,7 @@
   background-color: white;
   color: var(--primary-bg-color);
   padding: 1.5rem 3rem;
-  margin-bottom: var(--section-spacing-sm);
+  margin-bottom: var(--section-spacing-xxl);
   text-align: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -15,7 +15,7 @@
 .main-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: var(--section-spacing-sm);
+  margin-bottom: var(--section-spacing-xxl);
   gap: 2rem;
 }
 
@@ -28,9 +28,9 @@ footer {
 /* Form layout */
 .form-section {
   background-color: white;
-  padding: 2rem 3rem;
+  padding: var(--component-padding-xxl);
   border-radius: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--component-spacing-xxl);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
@@ -102,7 +102,7 @@ footer {
 .cv-experience .content {
   display: grid;
   grid-template-columns: 220px 1fr;
-  padding: 0 3rem;
+  padding-inline: var(--cv-spacing-xxl);
   gap: 2rem;
 }
 
