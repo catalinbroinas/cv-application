@@ -1,4 +1,31 @@
-/* Form */
+/* ===============================
+  Layout
+================================= */
+/* App layout */
+.intro {
+  background-color: white;
+  color: var(--primary-bg-color);
+  padding: 1.5rem 3rem;
+  margin-bottom: var(--section-spacing-sm);
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: var(--section-spacing-sm);
+  gap: 2rem;
+}
+
+footer {
+  background-color: var(--tertiary-bg-color);
+  padding: 1.5rem 3rem;
+  text-align: center;
+}
+
+/* Form layout */
 .form-section {
   background-color: white;
   padding: 2rem 3rem;
@@ -30,6 +57,82 @@
   padding: 1rem 0 0;
 }
 
+/* Button group layout */
+.button-group {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button-group .btn {
+  margin: 0;
+}
+
+/* CV Preview Layout */
+.cv {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cv-header {
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-color);
+  padding: var(--cv-header-padding-xxl);
+  margin-bottom: var(--cv-spacing-xxl);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.cv-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-header .cv-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cv-education .content,
+.cv-experience .content {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  padding: 0 3rem;
+  gap: 2rem;
+}
+
+/* CV Preview spacing */
+.cv-header .cv-contact .text {
+  margin-right: 2rem;
+}
+
+.cv-header .cv-contact .text:last-of-type {
+  margin-right: 0;
+}
+
+.cv-education,
+.cv-experience {
+  margin-bottom: var(--cv-spacing-xxl);
+}
+
+.cv-education .content,
+.cv-experience .content {
+  margin-bottom: 1rem;
+}
+
+.cv-education .content:last-of-type,
+.cv-experience .content:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ===============================
+  Form
+================================= */
 .form-control {
   font-family: var(--font-text);
   width: 100%;
@@ -135,18 +238,10 @@
   font-family: var(--font-title);
 }
 
-/* Components */
-.button-group {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.button-group .btn {
-  margin: 0;
-}
-
+/* ===============================
+  Components
+================================= */
+/* Buttons */
 .btn {
   cursor: pointer;
   display: inline-flex;
@@ -215,7 +310,7 @@
   border-color: var(--danger-color);
 }
 
-/* Display Data layout */
+/* Cards */
 .display-data {
   display: flex;
   align-items: center;
@@ -235,67 +330,10 @@
   gap: 1rem;
 }
 
-/* CV Preview Layout */
-.cv {
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.cv-header {
-  background-color: var(--secondary-bg-color);
-  color: var(--primary-color);
-  padding: var(--cv-header-padding-xxl);
-  margin-bottom: var(--cv-spacing-xxl);
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-}
-
-.cv-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.cv-header .cv-contact {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.cv-header .cv-contact .text {
-  margin-right: 2rem;
-}
-
-.cv-header .cv-contact .text:last-of-type {
-  margin-right: 0;
-}
-
-.cv-education,
-.cv-experience {
-  margin-bottom: var(--cv-spacing-xxl);
-}
-
-.cv-education .content,
-.cv-experience .content {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  padding: 0 3rem;
-  gap: 2rem;
-}
-
-.cv-education .content,
-.cv-experience .content {
-  margin-bottom: 1rem;
-}
-
-.cv-education .content:last-of-type,
-.cv-experience .content:last-of-type {
-  margin-bottom: 0;
-}
-
-/* CV Preview Typography */
+/* ===============================
+  Typography
+================================= */
+/* CV Preview */
 .cv-header .title {
   font-size: 2.5rem;
   margin-bottom: 0.75rem;
