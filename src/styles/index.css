@@ -1,3 +1,6 @@
+/* ===============================
+  Variables
+================================= */
 :root {
   /* Fonts */
   --font-title: Arial, Helvetica, sans-serif;
@@ -48,6 +51,10 @@
   --container-padding-xl: 3rem;
 }
 
+/* ===============================
+  Global style
+================================= */
+/* Reset */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -70,20 +77,23 @@ ul {
   padding-left: 0;
 }
 
+/* Typography */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-title);
+  font-family: var(--font-title), sans-serif;
 }
 
 p {
-  font-family: var(--font-text);
+  font-family: var(--font-text), sans-serif;
 }
 
-/* Layout */
+/* ===============================
+  Layout
+================================= */
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -101,30 +111,9 @@ p {
   grid-template-rows: auto 1fr auto;
 }
 
-.intro {
-  background-color: white;
-  color: var(--primary-bg-color);
-  padding: 1.5rem 3rem;
-  margin-bottom: var(--section-spacing-sm);
-  text-align: center;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.main-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: var(--section-spacing-sm);
-  gap: 2rem;
-}
-
-footer {
-  background-color: var(--tertiary-bg-color);
-  padding: 1.5rem 3rem;
-  text-align: center;
-}
-
-/* Typography */
+/* ===============================
+  Typography
+================================= */
 .title {
   font-size: 3rem;
   font-weight: 700;
