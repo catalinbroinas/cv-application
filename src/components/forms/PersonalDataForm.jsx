@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faArrowLeft, faTrash } from "@fortawesome/free-solid-svg-icons";
+
 function PersonalDataForm({ onSave, onBack, initialData = {} }) {
     const [firstName, setFirstName] = useState(initialData.firstName || '');
     const [lastName, setLastName] = useState(initialData.lastName || '');
@@ -108,20 +111,20 @@ function PersonalDataForm({ onSave, onBack, initialData = {} }) {
                     className="btn btn-tertiary"
                     type="button"
                     onClick={handleBackClick}
-                >Back</button>
+                ><FontAwesomeIcon icon={faArrowLeft} className="me-2" />Back</button>
 
                 <button 
                     className="btn btn-secondary" 
                     type="reset" 
                     onClick={handleClearClick}
-                >Clear</button>
+                ><FontAwesomeIcon icon={faTrash} className="me-2" />Clear</button>
 
                 <button 
                     className={isButtonDisabled ? 'btn btn-primary btn-disabled' : 'btn btn-primary'} 
                     type="submit" 
                     onClick={handleSaveClick}
                     disabled={isButtonDisabled}
-                >Save</button>
+                ><FontAwesomeIcon icon={faCheck} className="me-2" />Save</button>
             </div>
         </form>
     );
