@@ -186,6 +186,10 @@ p {
   margin-right: 0.5rem;
 }
 
+.me-3 {
+  margin-right: 1rem;
+}
+
 @media (max-width: 1399px) {
   .container {
     padding-inline: var(--container-padding-xl);

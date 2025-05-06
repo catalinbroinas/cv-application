@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faGraduationCap, faBriefcase } from "@fortawesome/free-solid-svg-icons";
+
 import PersonalDataForm from "../../components/forms/PersonalDataForm";
 import EducationForm from "../../components/forms/EducationForm";
 import ExperienceForm from "../../components/forms/ExperienceForm";
@@ -20,7 +23,9 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
             <h2 className="sr-only">Introduce data</h2>
 
             <div className="form-section">
-                <h3 className="sub-title">Personal Information</h3>
+                <h3 className="sub-title">
+                    <FontAwesomeIcon icon={faUser} className="me-3" />Personal Information
+                </h3>
 
                 {
                     isEditing ? (
@@ -46,7 +51,9 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
             </div>
 
             <div className="form-section">
-                <h3 className="sub-title">Education</h3>
+                <h3 className="sub-title">
+                    <FontAwesomeIcon icon={faGraduationCap} className="me-3" />Education
+                </h3>
 
                 {
                     isEditingEducation ? (
@@ -107,7 +114,9 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
             </div>
 
             <div className="form-section">
-                <h3 className="sub-title">Work Experience</h3>
+                <h3 className="sub-title">
+                    <FontAwesomeIcon icon={faBriefcase} className="me-3" />Work Experience
+                </h3>
 
                 {
                     isEditingExperience ? (
