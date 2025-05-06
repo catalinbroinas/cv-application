@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faCheck, faArrowLeft, faTrash } from "@fortawesome/free-solid-svg-icons";
+
 function ExperienceForm({ onAdd, onBack, isEditing, initialData = {} }) {
     const id = crypto.randomUUID() || initialData.id;
     const [jobTitle, setJobTitle] = useState(initialData.jobTitle || '');
@@ -127,20 +130,26 @@ function ExperienceForm({ onAdd, onBack, isEditing, initialData = {} }) {
                     className="btn btn-tertiary"
                     type="button"
                     onClick={handleBackClick}
-                >Back</button>
+                ><FontAwesomeIcon icon={faArrowLeft} className="me-2" />Back</button>
 
                 <button 
                     className="btn btn-secondary" 
                     type="reset" 
                     onClick={handleClearClick}
-                >Clear</button>
+                ><FontAwesomeIcon icon={faTrash} className="me-2" />Clear</button>
 
                 <button 
                     className={isButtonDisabled ? 'btn btn-primary btn-disabled' : 'btn btn-primary'}
                     type="submit" 
                     onClick={handleAddClick}
                     disabled={isButtonDisabled}
-                >{isEditing ? 'Save' : 'Add'}</button>
+                >
+                    {isEditing ?(
+                        <><FontAwesomeIcon icon={faCheck} className="me-2" />Save</>
+                    ) : (
+                        <><FontAwesomeIcon icon={faPlus} className="me-2" />Add</>
+                    )}
+                </button>
             </div>
         </form>
     );
