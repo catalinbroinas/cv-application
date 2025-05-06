@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare, faTrash  } from "@fortawesome/free-solid-svg-icons";
 
 function ExperienceDataDisplay({ experienceData, onEdit, onDelete }) {
     return (
@@ -18,13 +20,17 @@ function ExperienceDataDisplay({ experienceData, onEdit, onDelete }) {
                             className="btn btn-secondary btn-delete"
                             type="button"
                             onClick={() => onDelete(entry.id)}
-                        >Delete</button>
+                        >
+                            <FontAwesomeIcon icon={faTrash} className="me-2" />Delete
+                        </button>
 
                         <button 
                             className="btn btn-secondary" 
                             type="button" 
                             onClick={() => onEdit(entry.id)}
-                        >Edit</button>
+                        >
+                            <FontAwesomeIcon icon={faPenToSquare} className="me-2" />Edit
+                        </button>
                     </div>
                 </div>
             ))}
