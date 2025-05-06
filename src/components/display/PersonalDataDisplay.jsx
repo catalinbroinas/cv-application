@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 function PersonalDataDisplay({ personalData, onEdit }) {
     const { firstName, lastName, email, phone, address } = personalData;
@@ -15,7 +17,9 @@ function PersonalDataDisplay({ personalData, onEdit }) {
             </div>
 
             <div className="display-data-action">
-                <button className="btn btn-secondary" type="button" onClick={handleEditClick}>Edit</button>
+                <button className="btn btn-secondary" type="button" onClick={handleEditClick}>
+                    <FontAwesomeIcon icon={faPenToSquare} className="me-2" />Edit
+                </button>
             </div>
         </div>
     );
