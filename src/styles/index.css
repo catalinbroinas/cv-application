@@ -65,8 +65,9 @@
   /* Container padding */
   --container-padding-sm: 1.5rem;
   --container-padding-md: 2rem;
-  --container-padding-lg: 2.5rem;
-  --container-padding-xl: 3rem;
+  --container-padding-lg: 1.5rem;
+  --container-padding-xl: 2rem;
+  --container-padding-xxl: 0;
 }
 
 /* ===============================
@@ -115,7 +116,7 @@ p {
 .container {
   max-width: 1320px;
   margin: 0 auto;
-  padding-inline: var(--container-padding-sm);
+  padding-inline: var(--container-padding-xxl);
 }
 
 .container-fluid {
@@ -183,4 +184,28 @@ p {
 /* Margin */
 .me-2 {
   margin-right: 0.5rem;
+}
+
+@media (max-width: 1399px) {
+  .container {
+    padding-inline: var(--container-padding-xl);
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    padding-inline: var(--container-padding-lg);
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding-inline: var(--container-padding-md);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-inline: var(--container-padding-sm);
+  }
 }
