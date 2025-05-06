@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faGraduationCap, faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faGraduationCap, faBriefcase, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 import PersonalDataForm from "../../components/forms/PersonalDataForm";
 import EducationForm from "../../components/forms/EducationForm";
@@ -107,7 +107,9 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                                     setIsEditingEducation(true)
                                     setEducationEditingId(null)
                                 }}
-                            >Add Education</button>
+                            >
+                                <FontAwesomeIcon icon={faPlus} className="me-2" />Education
+                            </button>
                         </>
                     )
                 }
@@ -170,7 +172,9 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                                     setIsEditingExperience(true)
                                     setExperienceEditingId(null)
                                 }}
-                            >Add Experience</button>
+                            >
+                                <FontAwesomeIcon icon={faPlus} className="me-2" />Experience
+                            </button>
                         </>
                     )
                 }
