@@ -159,7 +159,7 @@ footer {
 
 .form-control:placeholder-shown {
   border: 0;
-  border-bottom: 2px solid var(--secondary-bg-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .form-control:focus,
@@ -168,7 +168,7 @@ footer {
   border-image: linear-gradient(
     to right,
     var(--primary-bg-color),
-    var(--accent-color)
+    var(--accent-bg-color)
   );
   border-image-slice: 1;
 }
