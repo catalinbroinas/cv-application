@@ -13,9 +13,9 @@ function CVExperience({ experienceData }) {
                     </div>
 
                     <div className="job">
-                        <p className="text fw-bold">{entry.companyName}</p>
-                        <p className="text">{entry.jobTitle}</p>
-                        <p className="text-light">{entry.jobDescription}</p>
+                        <p className="text fw-bold text-primary">{entry.companyName}</p>
+                        <p className="text fw-bolder">{entry.jobTitle}</p>
+                        <p className="text text-secondary">{entry.jobDescription}</p>
                     </div>
                 </div>
             ))}
