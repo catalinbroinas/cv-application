@@ -315,6 +315,11 @@ footer {
   border-color: var(--danger-color);
 }
 
+.btn-rounded {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
 /* Cards */
 .display-data {
   display: flex;

@@ -17,19 +17,19 @@ function EducationDataDisplay({ educationData, onEdit, onDelete }) {
 
                 <div className="display-data-action">
                     <button
-                        className="btn btn-secondary btn-delete"
+                        className="btn btn-secondary btn-rounded btn-delete"
                         type="button"
                         onClick={() => onDelete(entry.id)}
                     >
-                        <FontAwesomeIcon icon={faTrash} className="me-2" />Delete
+                        <FontAwesomeIcon icon={faTrash} aria-label="Delete" />
                     </button>
 
                     <button 
-                        className="btn btn-secondary" 
+                        className="btn btn-secondary btn-rounded" 
                         type="button" 
                         onClick={() => onEdit(entry.id)}
                     >
-                        <FontAwesomeIcon icon={faPenToSquare} className="me-2" />Edit
+                        <FontAwesomeIcon icon={faPenToSquare} aria-label="Edit" />
                     </button>
                 </div>
             </div>
