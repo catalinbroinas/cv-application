@@ -19,6 +19,7 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
     const [experienceEditingId, setExperienceEditingId] = useState(null);
 
     const [isPersonalDataOpen, setIsPersonalDataOpen] = useState(true);
+    const [isEducationOpen, setIsEducationOpen] = useState(false);
 
     return (
         <section className="insert-data">
@@ -63,12 +64,23 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                 </div>}
             </div>
 
-            <div className="form-section">
-                <h3 className="sub-title">
-                    <FontAwesomeIcon icon={faGraduationCap} className="me-3" />Education
-                </h3>
+            <div className="form-section accordion">
+                <div 
+                    className="accordion-header"
+                    role="button"
+                    aria-expanded={isEducationOpen}
+                    onClick={() => setIsEducationOpen(!isEducationOpen)}
+                >
+                    <FontAwesomeIcon icon={faGraduationCap} />
+                    <h3 className="sub-title">Education</h3>
+                    {isEducationOpen ? (
+                        <><FontAwesomeIcon icon={faAngleUp} className="ms-auto" /></>
+                    ) : (
+                        <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" /></>
+                    )}
+                </div>
 
-                {
+                {isEducationOpen && <div className="accordion-body"> {
                     isEditingEducation ? (
                         <EducationForm
                             initialData={
@@ -125,7 +137,7 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                             </button>
                         </>
                     )
-                }
+                }</div>}
             </div>
 
             <div className="form-section">
