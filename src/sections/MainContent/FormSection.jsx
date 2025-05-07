@@ -20,6 +20,7 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
 
     const [isPersonalDataOpen, setIsPersonalDataOpen] = useState(true);
     const [isEducationOpen, setIsEducationOpen] = useState(false);
+    const [isExperienceOpen, setIsExperienceOpen] = useState(false);
 
     return (
         <section className="insert-data">
@@ -140,12 +141,23 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                 }</div>}
             </div>
 
-            <div className="form-section">
-                <h3 className="sub-title">
-                    <FontAwesomeIcon icon={faBriefcase} className="me-3" />Work Experience
-                </h3>
+            <div className="form-section accordion">
+                <div 
+                    className="accordion-header"
+                    role="button"
+                    aria-expanded={isExperienceOpen}
+                    onClick={() => setIsExperienceOpen(!isExperienceOpen)}
+                >
+                    <FontAwesomeIcon icon={faBriefcase} />
+                    <h3 className="sub-title">Work Experience</h3>
+                    {isExperienceOpen ? (
+                        <><FontAwesomeIcon icon={faAngleUp} className="ms-auto" /></>
+                    ) : (
+                        <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" /></>
+                    )}
+                </div>
 
-                {
+                {isExperienceOpen && <div className="accordion-body">{
                     isEditingExperience ? (
                         <ExperienceForm 
                             initialData={
@@ -201,8 +213,7 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                                 <FontAwesomeIcon icon={faPlus} className="me-2" />Experience
                             </button>
                         </>
-                    )
-                }
+                    )}</div>}
             </div>
         </section>
     );
