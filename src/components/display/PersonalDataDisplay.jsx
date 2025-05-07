@@ -17,8 +17,12 @@ function PersonalDataDisplay({ personalData, onEdit }) {
             </div>
 
             <div className="display-data-action">
-                <button className="btn btn-secondary btn-rounded" type="button" onClick={handleEditClick}>
-                    <FontAwesomeIcon icon={faPenToSquare} aria-label="Edit" />
+                <button 
+                    className="btn btn-secondary btn-rounded" 
+                    type="button"
+                    aria-label="Edit"
+                    onClick={handleEditClick}>
+                    <FontAwesomeIcon icon={faPenToSquare} />
                 </button>
             </div>
         </div>
