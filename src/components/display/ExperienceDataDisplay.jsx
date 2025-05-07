@@ -19,17 +19,19 @@ function ExperienceDataDisplay({ experienceData, onEdit, onDelete }) {
                         <button
                             className="btn btn-secondary btn-rounded btn-delete"
                             type="button"
+                            aria-label="Delete"
                             onClick={() => onDelete(entry.id)}
                         >
-                            <FontAwesomeIcon icon={faTrash} aria-label="Delete" />
+                            <FontAwesomeIcon icon={faTrash} />
                         </button>
 
                         <button 
                             className="btn btn-secondary btn-rounded"
-                            type="button" 
+                            type="button"
+                            aria-label="Edit"
                             onClick={() => onEdit(entry.id)}
                         >
-                            <FontAwesomeIcon icon={faPenToSquare} aria-label="Edit" />
+                            <FontAwesomeIcon icon={faPenToSquare} />
                         </button>
                     </div>
                 </div>
