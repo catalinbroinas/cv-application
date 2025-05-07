@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faGraduationCap, faBriefcase, faPlus, faChevronDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faGraduationCap, faBriefcase, faPlus, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 import PersonalDataForm from "../../components/forms/PersonalDataForm";
 import EducationForm from "../../components/forms/EducationForm";
@@ -36,7 +36,7 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                     <FontAwesomeIcon icon={faUser} />
                     <h3 className="sub-title">Personal Information</h3>
                     {isPersonalDataOpen ? (
-                        <><FontAwesomeIcon icon={faAngleUp} className="ms-auto" /></>
+                        <><FontAwesomeIcon icon={faChevronUp} className="ms-auto" /></>
                     ) : (
                         <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" /></>
                     )}
@@ -75,7 +75,7 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                     <FontAwesomeIcon icon={faGraduationCap} />
                     <h3 className="sub-title">Education</h3>
                     {isEducationOpen ? (
-                        <><FontAwesomeIcon icon={faAngleUp} className="ms-auto" /></>
+                        <><FontAwesomeIcon icon={faChevronUp} className="ms-auto" /></>
                     ) : (
                         <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" /></>
                     )}
@@ -151,7 +151,7 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                     <FontAwesomeIcon icon={faBriefcase} />
                     <h3 className="sub-title">Work Experience</h3>
                     {isExperienceOpen ? (
-                        <><FontAwesomeIcon icon={faAngleUp} className="ms-auto" /></>
+                        <><FontAwesomeIcon icon={faChevronUp} className="ms-auto" /></>
                     ) : (
                         <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" /></>
                     )}
