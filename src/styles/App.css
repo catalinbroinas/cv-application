@@ -120,6 +120,15 @@ footer {
   margin-bottom: 0;
 }
 
+/* Accordion */
+.accordion-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* ===============================
   Form
 ================================= */

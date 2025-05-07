@@ -203,6 +203,10 @@ p {
   margin-right: 1rem;
 }
 
+.ms-auto {
+  margin-left: auto;
+}
+
 @media (max-width: 1399px) {
   .container {
     padding-inline: var(--container-padding-xl);

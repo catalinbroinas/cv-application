@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faGraduationCap, faBriefcase, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faGraduationCap, faBriefcase, faPlus, faChevronDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 import PersonalDataForm from "../../components/forms/PersonalDataForm";
 import EducationForm from "../../components/forms/EducationForm";
@@ -18,17 +18,30 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
     const [educationEditingId, setEducationEditingId] = useState(null);
     const [experienceEditingId, setExperienceEditingId] = useState(null);
 
+    const [isPersonalDataOpen, setIsPersonalDataOpen] = useState(true);
+
     return (
         <section className="insert-data">
             <h2 className="sr-only">Introduce data</h2>
 
-            <div className="form-section">
-                <h3 className="sub-title">
-                    <FontAwesomeIcon icon={faUser} className="me-3" />Personal Information
-                </h3>
+            <div className="form-section accordion">
+                <div
+                    className="accordion-header" 
+                    role="button"
+                    aria-expanded={isPersonalDataOpen}
+                    onClick={() => setIsPersonalDataOpen(!isPersonalDataOpen)}
+                >
+                    <FontAwesomeIcon icon={faUser} />
+                    <h3 className="sub-title">Personal Information</h3>
+                    {isPersonalDataOpen ? (
+                        <><FontAwesomeIcon icon={faAngleUp} className="ms-auto" /></>
+                    ) : (
+                        <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" /></>
+                    )}
+                </div>
 
-                {
-                    isEditing ? (
+                {isPersonalDataOpen && <div className="accordion-body">
+                    {isEditing ? (
                         <PersonalDataForm 
                             onSave={(data) => {
                                 setPersonalData(data);
@@ -46,8 +59,8 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                             personalData={personalData}
                             onEdit={() => setIsEditing(true)}
                         />
-                    )
-                }
+                    )}
+                </div>}
             </div>
 
             <div className="form-section">
