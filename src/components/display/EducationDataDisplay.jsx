@@ -8,11 +8,11 @@ function EducationDataDisplay({ educationData, onEdit, onDelete }) {
             <div className="display-data" key={entry.id}>
                 <div className="display-data-content">
                     <p className="text fw-bold">{entry.schoolName}</p>
-                    <p className="text">{entry.schoolLocation}</p>
                     <p className="text">{entry.degree}</p>
                     <p className="text">
                         {entry.educationStartDate} - {entry.isPresentStudy ? 'present' : entry.educationEndDate}
                     </p>
+                    <p className="text">{entry.schoolLocation}</p>
                 </div>
 
                 <div className="display-data-action">
