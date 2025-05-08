@@ -6,16 +6,16 @@ function CVEducation({ educationData }) {
 
             {educationData.map((entry) => (
                 <div className="content" key={entry.id}>
+                    <div className="degree">
+                        <p className="text fw-bold">{entry.schoolName}</p>
+                        <p className="text">{entry.degree}</p>
+                    </div>
+
                     <div className="date-time">
                         <p className="text">
                             {entry.educationStartDate} - {entry.isPresentStudy ? 'present' : entry.educationEndDate}
                         </p>
                         <p className="text">{entry.schoolLocation}</p>
-                    </div>
-
-                    <div className="degree">
-                        <p className="text fw-bold">{entry.schoolName}</p>
-                        <p className="text">{entry.degree}</p>
                     </div>
                 </div>
             ))}
