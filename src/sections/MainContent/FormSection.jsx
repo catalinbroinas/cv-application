@@ -28,17 +28,27 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
 
             <div className="form-section accordion">
                 <div
-                    className="accordion-header" 
+                    className="accordion-header"
                     role="button"
                     aria-expanded={isPersonalDataOpen}
+                    aria-label={isPersonalDataOpen
+                        ? "Collapse Personal Information section"
+                        : "Expand Personal Information section"
+                    }
                     onClick={() => setIsPersonalDataOpen(!isPersonalDataOpen)}
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        setIsPersonalDataOpen(!isPersonalDataOpen);
+                    }
+                    }}
                 >
-                    <FontAwesomeIcon icon={faUser} />
+                    <FontAwesomeIcon icon={faUser} aria-hidden="true" />
                     <h3 className="sub-title">Personal Information</h3>
                     {isPersonalDataOpen ? (
-                        <><FontAwesomeIcon icon={faChevronUp} className="ms-auto" /></>
+                        <><FontAwesomeIcon icon={faChevronUp} className="ms-auto" aria-hidden="true" /></>
                     ) : (
-                        <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" /></>
+                        <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" aria-hidden="true" /></>
                     )}
                 </div>
 
@@ -66,18 +76,28 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
             </div>
 
             <div className="form-section accordion">
-                <div 
+                <div
                     className="accordion-header"
                     role="button"
                     aria-expanded={isEducationOpen}
+                    aria-label={isEducationOpen
+                        ? 'Collapse Education section'
+                        : 'Expend Education section'
+                    }
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            setIsEducationOpen(!isEducationOpen)
+                        }
+                    }}
                     onClick={() => setIsEducationOpen(!isEducationOpen)}
                 >
-                    <FontAwesomeIcon icon={faGraduationCap} />
+                    <FontAwesomeIcon icon={faGraduationCap} aria-hidden="true" />
                     <h3 className="sub-title">Education</h3>
                     {isEducationOpen ? (
-                        <><FontAwesomeIcon icon={faChevronUp} className="ms-auto" /></>
+                        <><FontAwesomeIcon icon={faChevronUp} className="ms-auto" aria-hidden="true" /></>
                     ) : (
-                        <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" /></>
+                        <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" aria-hidden="true" /></>
                     )}
                 </div>
 
@@ -146,14 +166,24 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                     className="accordion-header"
                     role="button"
                     aria-expanded={isExperienceOpen}
+                    aria-label={isExperienceOpen 
+                        ? 'Collapse Work Experience section'
+                        : 'Expend Work Experience section'
+                    }
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            setIsExperienceOpen(!isExperienceOpen)
+                        }
+                    }}
                     onClick={() => setIsExperienceOpen(!isExperienceOpen)}
                 >
-                    <FontAwesomeIcon icon={faBriefcase} />
+                    <FontAwesomeIcon icon={faBriefcase} aria-hidden="true" />
                     <h3 className="sub-title">Work Experience</h3>
                     {isExperienceOpen ? (
-                        <><FontAwesomeIcon icon={faChevronUp} className="ms-auto" /></>
+                        <><FontAwesomeIcon icon={faChevronUp} className="ms-auto" aria-hidden="true" /></>
                     ) : (
-                        <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" /></>
+                        <><FontAwesomeIcon icon={faChevronDown} className="ms-auto" aria-hidden="true" /></>
                     )}
                 </div>
 
