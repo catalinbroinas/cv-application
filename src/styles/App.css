@@ -464,4 +464,9 @@ footer {
   .display-data:last-child {
     margin-bottom: 0;
   }
+
+  .button-group {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
