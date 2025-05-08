@@ -149,12 +149,13 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                             <button 
                                 className="btn btn-primary" 
                                 type="button"
+                                aria-label="Open Education form"
                                 onClick={() => {
                                     setIsEditingEducation(true)
                                     setEducationEditingId(null)
                                 }}
                             >
-                                <FontAwesomeIcon icon={faPlus} className="me-2" />Education
+                                <FontAwesomeIcon icon={faPlus} className="me-2" aria-hidden="true" />Education
                             </button>
                         </>
                     )
@@ -235,12 +236,13 @@ function FormSection({ setPersonalData, personalData, setEducationData, educatio
                             <button 
                                 className="btn btn-primary" 
                                 type="button"
+                                aria-label="Open Experience form"
                                 onClick={() => {
                                     setIsEditingExperience(true)
                                     setExperienceEditingId(null)
                                 }}
                             >
-                                <FontAwesomeIcon icon={faPlus} className="me-2" />Experience
+                                <FontAwesomeIcon icon={faPlus} className="me-2" aria-hidden="true" />Experience
                             </button>
                         </>
                     )}</div>}
