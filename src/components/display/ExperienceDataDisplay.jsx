@@ -7,12 +7,12 @@ function ExperienceDataDisplay({ experienceData, onEdit, onDelete }) {
             {experienceData.map((entry) => (
                 <div className="display-data" key={entry.id}>
                     <div className="display-data-content">
-                        <p className="text fw-bold">{entry.companyName}</p>
-                        <p className="text">{entry.jobTitle}</p>
-                        <p className="text">{entry.jobDescription}</p>
+                        <p className="text fw-bold">{entry.jobTitle}</p>
+                        <p className="text">{entry.companyName}</p>
                         <p className="text">
                             {entry.experienceStartDate} - {entry.isPresentWork ? 'present' : entry.experienceEndDate}
                         </p>
+                        <p className="text">{entry.jobDescription}</p>
                     </div>
 
                     <div className="display-data-action">
