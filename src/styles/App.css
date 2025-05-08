@@ -99,10 +99,21 @@ footer {
 
 .cv-education .content,
 .cv-experience .content {
-  display: grid;
-  grid-template-columns: 220px 1fr;
+  display: flex;
+  flex-direction: row-reverse;
   padding-inline: var(--cv-spacing-xxl);
   gap: 2rem;
+}
+
+.cv-education .content .degree,
+.cv-experience .content .job {
+  flex-grow: 1;
+}
+
+.cv-education .content .date-time,
+.cv-experience .content .date-time {
+  width: 225px;
+  flex-shrink: 0;
 }
 
 .cv-education,
@@ -403,9 +414,9 @@ footer {
     align-items: start;
   }
 
-  .cv-education .content,
-  .cv-experience .content {
-    grid-template-columns: 1fr 1fr;
+  .cv-education .content > *,
+  .cv-experience .content > * {
+    flex: 1 1 0;
   }
 }
 
@@ -420,9 +431,15 @@ footer {
     align-items: center;
   }
 
-  .cv-education .content,
-  .cv-experience .content {
-    grid-template-columns: 220px 1fr;
+  .cv-education .content .degree,
+  .cv-experience .content .job {
+    flex: 1 1 auto;
+  }
+
+  .cv-education .content .date-time,
+  .cv-experience .content .date-time {
+    width: 225px;
+    flex: 0 0 225px;
   }
 }
 
@@ -436,8 +453,16 @@ footer {
 
   .cv-education .content,
   .cv-experience .content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 0;
+  }
+
+  .cv-education .content .date-time,
+  .cv-experience .content .date-time,
+  .cv-education .content .degree,
+  .cv-experience .content .job {
+    width: 100%;
+    flex: unset;
   }
 
   .form-wrapper,
