@@ -9,4 +9,8 @@ Technologies used:
 * Vite
 * Font Awesome
 
-[Live demo](https://catalinbroinas.github.io/cv-application/)
+## Live demo
+
+[gitHub Pages](https://catalinbroinas.github.io/cv-application)
+
+[Netlify](https://cv-catalinbroinas.netlify.app/)
